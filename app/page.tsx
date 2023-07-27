@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import styles from './page.module.css'
-import { Bee, BeeContainer, BeeEye, GradientBackgroundCon, Ground, GroundCircles, LeftWing, RightWing } from '@/components/QuoteGenerator/QuoteGeneratorElements'
+import { Bee, BeeContainer, BeeEye, GradientBackgroundCon, Ground, GroundCircles, LeftWing, RightWing, Sheep, SheepContainer } from '@/components/QuoteGenerator/QuoteGeneratorElements'
 
 export default function Home() {
   return (
@@ -17,6 +17,9 @@ export default function Home() {
         </BeeContainer>
         <Ground></Ground>
         <GroundCircles></GroundCircles>
+        <SheepContainer>
+          <Sheep></Sheep>
+        </SheepContainer>
       </GradientBackgroundCon>
     </>
   )

@@ -151,13 +151,13 @@ export const GroundCircles = styled.div`
     height: 3vh;
     width: 200vw;
     position: absolute;
-    bottom: 10vh;
+    bottom: 9.8vh;
     background-repeat: repeat no-repeat;
-    background-size: 6vh 3vh;
+    background-size: 5.545vh 3.46vh;
     background-image: radial-gradient(
-        circle at 2.8vh 4vh,
-        #053905 3vh,
-        rgba(0, 0, 0, 0) 3vh
+        circle at 2.7725vh 3.46vh,
+        #053905 3.46vh,
+        rgba(0, 0, 0, 0) 3.46vh
     );
     animation: slide 20s infinite linear;
     transform: translateX(-100vw);
@@ -166,4 +166,37 @@ export const GroundCircles = styled.div`
             transform: translateX(0);
         }
     }
+`;
+
+export const SheepContainer = styled.div`
+    height: 30vh;
+    width: 30vh;
+    position: absolute;
+    bottom: 12.9vh;
+    right: 0;
+    background-color: #f07c08; //remove when finished
+    animation: walk 60s ease-in-out infinite;
+    @keyframes walk {
+        0% {
+            transform: translateX(15vw);
+        }
+        100% {
+            transform: translateX(-100vw);
+        }
+    }
+  
+`;
+
+export const Sheep = styled.div`
+    height: 20vh;
+    width: 20vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #0c333f;
+    box-shadow:
+        0 10vh 0 -7vh #0c333f,
+        0 -10vh 0 -7vh #0c333f;
 `;
