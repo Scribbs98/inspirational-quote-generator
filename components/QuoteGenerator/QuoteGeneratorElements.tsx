@@ -138,3 +138,32 @@ export const BeeEye = styled.div`
     border-radius: 50%;
     background-color: #0d323e;
 `;
+
+export const Ground = styled.div`
+    height: 10vh;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    background-color: #053905;
+`;
+
+export const GroundCircles = styled.div`
+    height: 3vh;
+    width: 200vw;
+    position: absolute;
+    bottom: 10vh;
+    background-repeat: repeat no-repeat;
+    background-size: 6vh 3vh;
+    background-image: radial-gradient(
+        circle at 2.8vh 4vh,
+        #053905 3vh,
+        rgba(0, 0, 0, 0) 3vh
+    );
+    animation: slide 20s infinite linear;
+    transform: translateX(-100vw);
+    @keyframes slide {
+        100% {
+            transform: translateX(0);
+        }
+    }
+`;
