@@ -4,7 +4,6 @@ import Image from "next/image";
 
 export const GradientBackgroundCon = styled.div`
     background: linear-gradient(to top, #a80077, #D38312, #56CCF2);
-    //background: linear-gradient(to top, #0f9b0f, #56CCF2);
     background-size: 300% 300%;
     animation: gradient 10s ease infinite;
     height: 100vh;
@@ -23,8 +22,8 @@ export const GradientBackgroundCon = styled.div`
 `;
 
 export const BeeContainer = styled.div`
-    height: 30vh;
-    width: 30vh;
+    height: 20vh;
+    width: 20vh;
     position: absolute;
     top: 0;
     right: 0;
@@ -82,14 +81,14 @@ export const BeeContainer = styled.div`
 `;
 
 export const Bee = styled.div`
-    height: 15vh;
-    width: 20vh;
+    height: 50%;
+    width: 66%;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     border-radius: 45%;
-    box-shadow: inset 0 -5vh rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 -3vh rgba(0, 0, 0, 0.15);
     background: linear-gradient(
         to right,
         #f4c13d 30%,
@@ -106,8 +105,8 @@ export const Bee = styled.div`
 `;
 
 export const LeftWing = styled.div`
-    height: 6vh;
-    width: 6vh;
+    height: 20%;
+    width: 20%;
     position: absolute;
     top: 5%;
     left: 31%;
@@ -124,8 +123,8 @@ export const LeftWing = styled.div`
 `;
 
 export const RightWing = styled.div`
-    height: 6vh;
-    width: 6vh;
+    height: 20%;
+    width: 20%;
     position: absolute;
     top: 5%;
     left: 50%;
@@ -142,8 +141,8 @@ export const RightWing = styled.div`
 `;
 
 export const BeeEye = styled.div`
-    height: 1vh;
-    width: 1vh;
+    height: 3.5%;
+    width: 3.5%;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 45%;
@@ -200,8 +199,8 @@ export const SheepContainer = styled.div`
 `;
 
 export const Sheep = styled.div`
-    height: 20vh;
-    width: 20vh;
+    height: 66%;
+    width: 50%;
     position: absolute;
     top: 15%;
     left: 35%;
@@ -234,8 +233,8 @@ export const Sheep = styled.div`
 `;
 
 export const SheepLeg1 = styled.div`
-    height: 7vh;
-    width: 2vh;
+    height: 30%;
+    width: 5.3%;
     position: absolute;
     bottom: 0;
     left: 40%;
@@ -253,8 +252,8 @@ export const SheepLeg1 = styled.div`
 `;
 
 export const SheepLeg2 = styled.div`
-    height: 7vh;
-    width: 2vh;
+    height: 30%;
+    width: 5.3%;
     position: absolute;
     bottom: 0;
     left: 47%;
@@ -272,8 +271,8 @@ export const SheepLeg2 = styled.div`
 `;
 
 export const SheepLeg3 = styled.div`
-    height: 7vh;
-    width: 2vh;
+    height: 30%;
+    width: 5.3%;
     position: absolute;
     bottom: 0;
     left: 68%;
@@ -291,8 +290,8 @@ export const SheepLeg3 = styled.div`
 `;
 
 export const SheepLeg4 = styled.div`
-    height: 7vh;
-    width: 2vh;
+    height: 30%;
+    width: 5.3%;
     position: absolute;
     bottom: 0;
     left: 75%;
@@ -310,12 +309,12 @@ export const SheepLeg4 = styled.div`
 `;
 
 export const SheepFace = styled.div`
-    height: 7vh;
-    width: 7vh;
+    height: 24%;
+    width: 24%;
     position: absolute;
     top: 35%;
     left: 15%;
-    border-radius: 50% 20% 20% 50%;
+    border-radius: 45% 20% 20% 45%;
     background-color: #002436;
     animation: face-shake 0.5s infinite;
     @keyframes face-shake {
@@ -327,10 +326,10 @@ export const SheepFace = styled.div`
 `;
 
 export const LeftEar = styled.div`
-    height: 4vh;
-    width: 1.5vh;
+    height: 12.5%;
+    width: 4%;
     position: absolute;
-    top: 24%;
+    top: 26%;
     left: 20%;
     border-radius: 40%;
     background-color: #002436;
@@ -345,10 +344,10 @@ export const LeftEar = styled.div`
 `;
 
 export const RightEar = styled.div`
-    height: 4vh;
-    width: 1.5vh;
+    height: 12.5%;
+    width: 4%;
     position: absolute;
-    top: 24%;
+    top: 26%;
     left: 25%;
     border-radius: 40%;
     background-color: #002436;
