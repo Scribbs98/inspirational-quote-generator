@@ -3,9 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const GradientBackgroundCon = styled.div`
-    background: linear-gradient(to top, #0f9b0f, #56CCF2);
-    background-size: 400% 400%;
-    animation: gradient 6s ease infinite;
+    background: linear-gradient(to top, #a80077, #D38312, #56CCF2);
+    //background: linear-gradient(to top, #0f9b0f, #56CCF2);
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
     height: 100vh;
     width: 100vw;
     @keyframes gradient {
@@ -108,24 +109,36 @@ export const LeftWing = styled.div`
     height: 6vh;
     width: 6vh;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 15%;
-    left: 40%;
+    top: 5%;
+    left: 31%;
     border-radius: 50% 50% 0% 50%;
     background-color: #e6e6e6;
     opacity: 0.7;
+    animation: flutter-1 0.5s infinite;
+    @keyframes flutter-1 {
+        50% {
+            transform-origin: bottom right;
+            rotate: 15deg;
+        }
+    }
 `;
 
 export const RightWing = styled.div`
     height: 6vh;
     width: 6vh;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 15%;
-    left: 60%;
+    top: 5%;
+    left: 50%;
     border-radius: 50% 50% 50% 0%;
     background-color: #e6e6e6;
     opacity: 0.7;
+    animation: flutter-2 0.5s infinite;
+    @keyframes flutter-2 {
+        50% {
+            transform-origin: bottom left;
+            rotate: -15deg;
+        }
+    }
 `;
 
 export const BeeEye = styled.div`
@@ -170,12 +183,11 @@ export const GroundCircles = styled.div`
 
 export const SheepContainer = styled.div`
     height: 30vh;
-    width: 30vh;
+    width: 40vh;
     position: absolute;
-    bottom: 12.9vh;
+    bottom: 12.7vh;
     right: 0;
-    background-color: #f07c08; //remove when finished
-    animation: walk 60s ease-in-out infinite;
+    animation: walk 60s infinite linear;
     @keyframes walk {
         0% {
             transform: translateX(15vw);
@@ -191,12 +203,161 @@ export const Sheep = styled.div`
     height: 20vh;
     width: 20vh;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+    top: 15%;
+    left: 35%;
+    z-index: 1;
     border-radius: 50%;
-    background-color: #0c333f;
+    background-color: #fffdd0;
     box-shadow:
-        0 10vh 0 -7vh #0c333f,
-        0 -10vh 0 -7vh #0c333f;
+        0 10vh 0 -7.2vh #fffdd0,
+        0 -10vh 0 -7.2vh #fffdd0,
+        10vh 0 0 -7.2vh #fffdd0,
+        -10vh 0 0 -7.2vh #fffdd0,
+        9.2vh 4vh 0 -7.2vh #fffdd0,
+        9.2vh -4vh 0 -7.2vh #fffdd0,
+        -9.2vh 4vh 0 -7.2vh #fffdd0,
+        -9.2vh -4vh 0 -7.2vh #fffdd0,
+        4vh 9.2vh 0 -7.2vh #fffdd0,
+        4vh -9.2vh 0 -7.2vh #fffdd0,
+        -4vh 9.2vh 0 -7.2vh #fffdd0,
+        -4vh -9.2vh 0 -7.2vh #fffdd0,
+        -7.2vh -7.2vh 0 -7.2vh #fffdd0,
+        -7.2vh 7.2vh 0 -7.2vh #fffdd0,
+        7.2vh -7.2vh 0 -7.2vh #fffdd0,
+        7.2vh 7.2vh 0 -7.2vh #fffdd0;
+    animation: body-shake 0.4s infinite linear;
+    @keyframes body-shake {
+        50% {
+            transform: translateY(0.5vh);
+        }
+    }
+`;
+
+export const SheepLeg1 = styled.div`
+    height: 7vh;
+    width: 2vh;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    border-radius: 40%;
+    background-color: #002436;
+    animation: run-1 1s infinite linear;
+    @keyframes run-1 {
+        65% {
+            transform: translateY(0);
+        }
+        66% {
+            transform: translateY(-5.5vh);
+        }
+    }
+`;
+
+export const SheepLeg2 = styled.div`
+    height: 7vh;
+    width: 2vh;
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    border-radius: 40%;
+    background-color: #002436;
+    animation: run-2 1s infinite linear;
+    @keyframes run-2 {
+        33% {
+            transform: translate(-5vh, -3vh);
+        }
+        66% {
+            transform: translate(-5vh, 0);
+        }
+    }
+`;
+
+export const SheepLeg3 = styled.div`
+    height: 7vh;
+    width: 2vh;
+    position: absolute;
+    bottom: 0;
+    left: 68%;
+    border-radius: 40%;
+    background-color: #002436;
+    animation: run-3 1s infinite linear;
+    @keyframes run-3 {
+        65% {
+            transform: translateY(0);
+        }
+        66% {
+            transform: translateY(-5.5vh);
+        }
+    }
+`;
+
+export const SheepLeg4 = styled.div`
+    height: 7vh;
+    width: 2vh;
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    border-radius: 40%;
+    background-color: #002436;
+    animation: run-4 1s infinite linear;
+    @keyframes run-4 {
+        33% {
+            transform: translate(-5vh, -3vh);
+        }
+        66% {
+            transform: translate(-5vh, 0);
+        }
+    }
+`;
+
+export const SheepFace = styled.div`
+    height: 7vh;
+    width: 7vh;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    border-radius: 50% 20% 20% 50%;
+    background-color: #002436;
+    animation: face-shake 0.5s infinite;
+    @keyframes face-shake {
+        50% {
+            transform-origin: bottom right;
+            rotate: -5deg;
+        }
+    }
+`;
+
+export const LeftEar = styled.div`
+    height: 4vh;
+    width: 1.5vh;
+    position: absolute;
+    top: 24%;
+    left: 20%;
+    border-radius: 40%;
+    background-color: #002436;
+    transform: rotate(-25deg);
+    animation: left-ear-shake 0.5s infinite;
+    @keyframes left-ear-shake {
+        50% {
+            transform-origin: top right;
+            rotate: 10deg;
+        }
+    }
+`;
+
+export const RightEar = styled.div`
+    height: 4vh;
+    width: 1.5vh;
+    position: absolute;
+    top: 24%;
+    left: 25%;
+    border-radius: 40%;
+    background-color: #002436;
+    transform: rotate(25deg);
+    animation: right-ear-shake 0.5s infinite;
+    @keyframes right-ear-shake {
+        50% {
+            transform-origin: top left;
+            rotate: -10deg;
+        }
+    }
 `;
