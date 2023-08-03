@@ -245,7 +245,7 @@ export const SheepLeg1 = styled.div`
         65% {
             transform: translateY(0);
         }
-        66% {
+        85% {
             transform: translateY(-5.5vh);
         }
     }
@@ -283,7 +283,7 @@ export const SheepLeg3 = styled.div`
         65% {
             transform: translateY(0);
         }
-        66% {
+        85% {
             transform: translateY(-5.5vh);
         }
     }
@@ -359,4 +359,21 @@ export const RightEar = styled.div`
             rotate: -10deg;
         }
     }
+`;
+
+export const FooterContainer = styled.div`
+    width: 100vw;
+    height: 9.8vh;
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    z-index: 999999;
+`;
+
+export const FooterLink = styled(Link)`
+    color: white;
+    text-decoration: none;
 `;

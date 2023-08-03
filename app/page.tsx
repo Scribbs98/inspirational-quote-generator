@@ -2,13 +2,19 @@
 
 import Image from 'next/image'
 import styles from './page.module.css'
-import { Bee, BeeContainer, BeeEye, GradientBackgroundCon, Ground, GroundCircles, LeftEar, LeftWing, RightEar, RightWing, Sheep, SheepContainer, SheepFace, SheepLeg1, SheepLeg2, SheepLeg3, SheepLeg4 } from '@/components/QuoteGenerator/QuoteGeneratorElements'
+import React, { useState } from 'react'
+
+// Components
+import { Bee, BeeContainer, BeeEye, FooterContainer, FooterLink, GradientBackgroundCon, Ground, GroundCircles, LeftEar, LeftWing, RightEar, RightWing, Sheep, SheepContainer, SheepFace, SheepLeg1, SheepLeg2, SheepLeg3, SheepLeg4 } from '@/components/QuoteGenerator/QuoteGeneratorElements'
 
 export default function Home() {
+  const [numberOfQuotes, setNumberOfQuotes] = useState<Number | null>(0);
+  
   return (
     <>
-      {/* Background */}
       <GradientBackgroundCon>
+
+        {/* Background */}
         <BeeContainer>
           <Bee></Bee>
           <LeftWing></LeftWing>
@@ -27,6 +33,15 @@ export default function Home() {
           <LeftEar></LeftEar>
           <RightEar></RightEar>
         </SheepContainer>
+
+        <FooterContainer>
+          <>
+            Quotes Generated: {numberOfQuotes}
+            <br/>
+            Developed by <FooterLink href="https://github.com/Scribbs98" target="_blank" rel="noopener noreferrer">@JennaLupton</FooterLink>
+          </>
+        </FooterContainer>
+
       </GradientBackgroundCon>
     </>
   )
